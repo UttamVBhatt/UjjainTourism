@@ -135,6 +135,7 @@ const makeAlert = (message) => {
 
 const loginBtn = document.querySelector(".login-btn");
 const signUpBtn = document.querySelector(".signup-btn");
+const updateDataBtn = document.querySelector(".update-password-btn");
 
 const getIn = async (method, url, data, message, dataset) => {
   const newMethod = method;
@@ -158,6 +159,7 @@ const getIn = async (method, url, data, message, dataset) => {
 
     if (newUrl === "updateMe") {
       url = `/api/v1/users/updateMe/${paraForRouting}`;
+      updateDataBtn.textContent = "Updating...";
     }
 
     if (newUrl === "updatePassword") {
