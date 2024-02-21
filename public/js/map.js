@@ -6,7 +6,7 @@ const para = url[url.length - 1];
 const dataFunction = async (url) => {
   try {
     const data = await (
-      await fetch(`http://localhost:3000/${url}`)
+      await fetch(`/${url}`)
     )
       .json()
       .then((data) => data)
