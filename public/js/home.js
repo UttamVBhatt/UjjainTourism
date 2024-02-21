@@ -107,8 +107,6 @@ const logOut = async () => {
       url: "/api/v1/users/logout",
     });
 
-    console.log(res);
-
     const token = res.data.token;
     document.cookie = "jwt" + "=" + token;
 
@@ -205,25 +203,17 @@ const getIn = async (method, url, data, message, dataset) => {
       makeAlert(message);
     } else if (newUrl === "createBooking") {
       showAlert("success", message);
-      window.setTimeout(() => {
-        location.assign(`/me/${urlForRouting[5]}`);
-      }, 1000);
+      goToMe();
     } else if (newUrl === "deleteBooking") {
       showAlert("success", message);
-      window.setTimeout(() => {
-        location.assign(`/me/${urlForRouting[4]}/bookings`);
-      }, 1000);
+      goToMe();
       console.log(urlForRouting);
     } else if (newUrl === "deleteReview") {
       showAlert("success", message);
-      window.setTimeout(() => {
-        location.assign(`/me/${urlForRouting[4]}/reviews`);
-      }, 1000);
+      goToMe();
     } else if (newUrl === "createReview") {
       showAlert("success", message);
-      window.setTimeout(() => {
-        location.assign(`/me/${urlForRouting[5]}`);
-      }, 1000);
+      goToMe();
     } else if (newUrl === "likeAndUnlike") {
       showAlert("success", message);
       window.setTimeout(() => {
@@ -231,9 +221,6 @@ const getIn = async (method, url, data, message, dataset) => {
       }, 1000);
     } else if (newUrl === "removeFromLikes") {
       showAlert("success", message);
-      window.setTimeout(() => {
-        location.assign(`/me/${urlForRouting[4]}/liked-hotels`);
-      }, 1000);
     } else {
       makeAlert(message);
     }
@@ -242,6 +229,12 @@ const getIn = async (method, url, data, message, dataset) => {
     console.log(err.response.data);
   }
 };
+
+function goToMe() {
+  window.setTimeout(() => {
+    location.assign(`/me`);
+  }, 1000);
+}
 
 ////////////////////////////////////////////////
 ///// Updating User data and Password//////////
