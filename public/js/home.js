@@ -104,7 +104,7 @@ const logOut = async () => {
   try {
     const res = await axios({
       method: "GET",
-      url: "http://127.0.0.1:3000/api/v1/users/logout",
+      url: "/api/v1/users/logout",
     });
 
     const token = res.data.token;
@@ -143,39 +143,39 @@ const getIn = async (method, url, data, message, dataset) => {
     const data = newData;
     const message = newMessage;
     if (newUrl === "login") {
-      url = "http://127.0.0.1:3000/api/v1/users/login";
+      url = "/api/v1/users/login";
     }
 
     if (newUrl === "signup") {
-      url = "http://127.0.0.1:3000/api/v1/users/signup";
+      url = "/api/v1/users/signup";
     }
 
     if (newUrl === "updateMe") {
-      url = `http://127.0.0.1:3000/api/v1/users/updateMe/${paraForRouting}`;
+      url = `/api/v1/users/updateMe/${paraForRouting}`;
     }
 
     if (newUrl === "updatePassword") {
-      url = `http://127.0.0.1:3000/api/v1/users/updatepassword/${paraForRouting}`;
+      url = `/api/v1/users/updatepassword/${paraForRouting}`;
     }
 
     if (newUrl === "createBooking") {
-      url = `http://127.0.0.1:3000/api/v1/bookings/book-hotel/${urlForRouting[4]}/${urlForRouting[5]}`;
+      url = `/api/v1/bookings/book-hotel/${urlForRouting[4]}/${urlForRouting[5]}`;
     }
 
     if (newUrl === "deleteBooking") {
-      url = `http://127.0.0.1:3000/api/v1/bookings/${dataset}`;
+      url = `/api/v1/bookings/${dataset}`;
     }
 
     if (newUrl === "createReview") {
-      url = `http://127.0.0.1:3000/api/v1/reviews/write-reviews/${urlForRouting[5]}/${urlForRouting[6]}`;
+      url = `/api/v1/reviews/write-reviews/${urlForRouting[5]}/${urlForRouting[6]}`;
     }
 
     if (newUrl === "deleteReview") {
-      url = `http://127.0.0.1:3000/api/v1/reviews/${dataset}`;
+      url = `/api/v1/reviews/${dataset}`;
     }
 
     if (newUrl === "likeAndUnlike" || newUrl === "removeFromLikes") {
-      url = `http://127.0.0.1:3000/added/${dataset}`;
+      url = `/added/${dataset}`;
     }
 
     const res = await axios({
