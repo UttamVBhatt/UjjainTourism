@@ -133,6 +133,8 @@ const makeAlert = (message) => {
   }, 1000);
 };
 
+const loginBtn = document.querySelector(".login-btn");
+
 const getIn = async (method, url, data, message, dataset) => {
   const newMethod = method;
   const newUrl = url;
@@ -145,6 +147,7 @@ const getIn = async (method, url, data, message, dataset) => {
     const message = newMessage;
     if (newUrl === "login") {
       url = "/api/v1/users/login";
+      loginBtn.textContent = "Loggin in...";
     }
 
     if (newUrl === "signup") {
@@ -246,6 +249,7 @@ const uploadPhotoForm = document.querySelector("#upload-photo");
 
 if (uploadPhotoForm) {
   uploadPhotoForm.addEventListener("click", (e) => {
+    uploadPhotoForm.textContent = "Wait a minute...";
     e.preventDefault();
     const form = new FormData();
     form.append("photo", document.querySelector("#photo").files[0]);
