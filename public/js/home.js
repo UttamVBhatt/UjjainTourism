@@ -134,6 +134,7 @@ const makeAlert = (message) => {
 };
 
 const loginBtn = document.querySelector(".login-btn");
+const signUpBtn = document.querySelector(".signup-btn");
 
 const getIn = async (method, url, data, message, dataset) => {
   const newMethod = method;
@@ -152,6 +153,7 @@ const getIn = async (method, url, data, message, dataset) => {
 
     if (newUrl === "signup") {
       url = "/api/v1/users/signup";
+      signUpBtn.textContent = "Creating Account...";
     }
 
     if (newUrl === "updateMe") {
