@@ -1,0 +1,36 @@
+extends account 
+
+block user-filters 
+     if user.likes[0]
+        .review-heading-div(data-aos='zoom-in')
+           h3 Your Liked Hotels
+        .hotel-container
+           .hotel-box(data-aos='zoom-out')
+              for hotels in user.hotels
+                .hotel-card
+                    |            
+                    .heading-span
+                        .pad-increase
+                            h2= hotels.hotelName
+                            span.remove-from-likes(data-set=`${hotels.id}/${user.id}`)       Remove from Likes
+                    |             
+                    .summary= hotels.summary
+                    |             
+                    .address-available
+                        .pad-increase
+                            p.address-para | Address :-
+                                span.address-span= hotels.address
+                    |             
+                    .price-ratings
+                        .pad-increase
+                            p.price | Price :-
+                                span.price-span= hotels.price 
+                            |                 
+                            p.ratings | Ratings :-
+                                span.ratings-span= hotels.ratings
+                    |                         
+                    .book-now-btn
+                        button.book-btn
+                          a(href=`/hotels/${hotels.slug}`) See the Hotel
+     else 
+       h3.else-booking You don't have any liked hotel yet...

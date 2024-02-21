@@ -1,0 +1,49 @@
+extends base
+
+block append head 
+    link(rel='stylesheet', href='/styles/songs.css')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer") 
+
+block content 
+    .song-container
+      h3.main-heading(data-aos='fade-right') Mahakal Songs  
+      img.song-background-image(src='/images/placesImages/mahakalImage3.jpg')    
+      .song-list-container
+        each song, i in data
+          .songs-div(data-aos='fade-up')
+            img(src=`/images/songImages/${song.image}`, alt="Song's Cover Image")                    
+            span.song-name= song.name                    
+            span.song-duration= song.author                    
+            i.fas.fa-solid.fa-play.mainPlay(data-set=`${i}`)
+        audio.audio1(src='/songs/Adiyogi.mp3')
+
+    // /////// CARD CONTAINER/////////////
+    .cardsContainer
+      .song-cards
+        .cross
+          button &times;
+        |                 
+        h4.cardSongName Adiyogi
+        |                 
+        h5.authorName Kailash Kher
+        |                 
+        .cardImage
+          img.cardImageImage(src='/images/songImages/image1.jpg', alt="Song's Image")
+        |                 
+        .inputRange
+          input.range(type='range', name='range', min='0', max='100', value='0')
+          |                     
+          img.gif(src='/images/songImages/gif.gif', autoplay, loop, muted, plays-inline)
+        |                 
+        .controls
+          i.fas.fa-solid.fa-backward.card-backward(onclick='change_index(-1)')
+          |                     
+          i.fas.fa-solid.fa-play.card-play
+          |                     
+          i.fas.fa-solid.fa-forward.card-forward(onclick='change_index(1)')
+             
+      .back-overlay
+    block append script    
+      script(src='/js/songs.js')

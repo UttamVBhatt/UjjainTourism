@@ -1,0 +1,47 @@
+extends base
+
+block append head 
+    link(rel='stylesheet', href='/styles/home.css')  
+
+block content
+    img.headerImage(src='/images/homeImage/headerBackgroundImage.jpeg', width='100%', alt="Mahakal's Image")
+    |       
+    .divMd
+      h2(data-aos='fade-up') Welcome to Ujjain Visitors
+      |         
+      p(data-aos='fade-up')
+        | A Website to get you the significant places of ujjain with comfortable
+        | stay.      
+    .overlay
+    section.jc.four
+      .tf
+        .d(data-aos='slide-right')
+          a(href='/hotels')
+            img(src='/images/homeImage/hotelsImage.jpeg', alt="Hotel's Image")              
+            span HOTELS         
+      .tf
+        .d(data-aos='slide-right')
+          a(href='/songs')
+            img(src='/images/homeImage/songs.jpeg', alt="Song's Image")               
+            span SONGS
+      .tf
+        .d(data-aos='slide-right')
+          a(href='/places')
+            img(src='/images/homeImage/placesImage.jpeg', alt='Mahakal Temple Image ')               
+            span PLACES         
+      .tf
+        .d(data-aos='slide-right')
+          a(href='/hidden')
+            img(src='/images/homeImage/hiddenImage.jpeg', alt="Hidden Place's Image")
+            |               
+            span HIDDEN         
+
+    each homeData in data 
+        .heading-div
+          h1.first-heading(data-aos='zoom-in')= homeData.heading       
+        section.data-section
+          .main-data-div
+            .data-image
+              img(data-aos='flip-up', src= `/images/homeImage/${homeData.image}`, alt=`${homeData.heading}`)           
+            .data-content
+              p= homeData.data

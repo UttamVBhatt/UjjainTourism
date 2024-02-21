@@ -1,0 +1,105 @@
+extends base
+
+block head    
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')     
+  link(rel='stylesheet', href='/styles/perHotel.css')
+  |   
+block content 
+  main.hotel-main
+      // ////////// CAROUSEL //////////
+      .main-hotel-image
+        img(src= `/images/hotelImages/${hotel[0].image} `, alt= "Hotel's Image")
+        |         
+        .hotel-modal
+          span(data-aos='fade-up')
+            | Welcome to 
+            br
+            span= hotel[0].name 
+      // /////////// PROPERTY SECTION ///////////
+      .property(data-aos='flip-right')
+        h3 About The Property
+        |         
+        p= hotel[0].Description 
+        |         
+        .address-available
+          p.address-para
+            | Name :- 
+            span.address-span= hotel[0].name 
+          |           
+          p.available-para
+            | Price :- 
+            span.available-span= hotel[0].price 
+        |         
+        .address-available
+          p.address-para
+            | Address :- 
+            span.address-span= hotel[0].address 
+          |           
+          p.available-para
+            | Available :- 
+            if hotel[0].availability === "Available"
+              span.available-span Yes 
+            else 
+              span.available-span No 
+      // ///////////// RATINGS SECITON ////////////////
+      .ratings-heading
+        h3(data-aos='fade-right') Services and Ratings
+      |       
+      .ratings
+        .rates
+          .food-container
+            i.fa-solid.fa-utensils.fa-bounce
+            |             
+            span= `${hotel[0].services[0]}`  
+          |           
+          .cleanliness-container
+            i.fa-solid.fa-car.fa-fade
+            |             
+            span= `${hotel[0].services[1]}` 
+          |           
+          .roomservice-container
+            i.fa-solid.fa-wifi
+            |             
+            span= `${hotel[0].services[2]}` 
+          |           
+          .behaviour-container
+            i.fa-solid.fa-square-parking.fa-fade
+            |             
+            span= `${hotel[0].services[3]}` 
+          |           
+          .experience-container
+            i.fa-solid.fa-soap.fa-bounce
+            |             
+            span= `${hotel[0].services[4]}` 
+        |         
+        .stars
+          .star
+            span.content= hotel[0].ratings 
+            |             
+            i.fa-solid.fa-star.fa-spin
+            |             
+            i.fa-solid.fa-star.fa-spin
+            |             
+            i.fa-solid.fa-star.fa-spin
+            |             
+            i.fa-solid.fa-star.fa-spin
+            |             
+            i.fa-solid.fa-star-half-stroke.fa-spin
+      // ///////////  REVIEW SECTION /////////
+      .review
+        if hotel.reviews[0]
+          h3(data-aos='fade-right') Customer&apos;s Review
+          for reviews in hotel.reviews      
+            .reviews(data-aos='zoom-in')
+              img.review-image(src= `/images/userImages/${reviews.userImage}` , alt="Reviewer's Image")
+              |           
+              p= reviews.hotelReview  
+              |           
+              span= `- ${reviews.userName}`
+        else 
+          h3(data-aose='fade-right') No Review Available 
+      |       
+      .book-hotel-btn
+        button.book
+          a(href=`/book-form/${hotel[0].id}/${user.id}`) Book Now
+

@@ -1,0 +1,342 @@
+/* //////////// SONG CONTAINER /////////// */
+
+.song-container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 5rem auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: white;
+  backdrop-filter: 10px;
+}
+
+body {
+  background-color: black;
+}
+
+.song-background-image {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  background-attachment: fixed;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.main-heading {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  border-radius: 3px;
+  margin: 3rem 0;
+  color: white;
+  font-weight: bolder;
+  padding: 8px 0;
+  font-family: "Tajawal", "sans-serif";
+}
+
+.song-list-container {
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.songs-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  user-select: none;
+  margin: 1.4rem auto;
+  backdrop-filter: blur(3px);
+  font-family: sans-serif;
+}
+
+.songs-div i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.songs-div img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media (max-width: 630px) {
+  .song-list-container {
+    width: 99%;
+  }
+
+  .songs-div {
+    font-size: 1rem;
+  }
+
+  .songs-div i {
+    font-size: 1.4rem;
+  }
+
+  .songs-div img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 410px) {
+  .song-list-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .songs-div {
+    font-size: 0.9rem;
+  }
+
+  .songs-div i {
+    font-size: 1rem;
+  }
+
+  .songs-div img {
+    width: 41px;
+    height: 41px;
+  }
+}
+
+/* ///////////////// CARD CONTAINER ///////////////////// */
+
+.cardsContainer {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.back-overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+  display: none;
+  backdrop-filter: blur(12px);
+}
+
+.song-cards {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 21px;
+  font-size: 1.3rem;
+  width: 40%;
+  z-index: 5;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  position: fixed;
+  transform: translateY(-10%);
+  transition: all 0.5s ease;
+  font-family: "Tajawal", sans-serif;
+}
+
+.cross {
+  width: 100%;
+}
+
+.cross button {
+  position: absolute;
+  top: 3px;
+  right: 12px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  padding: 6px 14px;
+  background: transparent;
+}
+
+.cross button:hover {
+  background-color: black;
+  color: white;
+}
+
+.cardSongName {
+  margin: 1rem 0;
+}
+
+.authorName {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.cardImage img {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  margin: 5px 0;
+}
+
+.controls i {
+  font-size: 1.4rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.controls i:hover {
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+}
+
+.inputRange {
+  width: 99%;
+  margin: 1.5rem auto;
+  text-align: center;
+  position: relative;
+}
+
+.range {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.gif {
+  width: 20%;
+  height: 21px;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  display: none;
+}
+
+.cardImageImage {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.anime {
+  animation: fade 3.6s linear infinite;
+}
+
+@keyframes fade {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modalView {
+  animation: modal 1s ease-in-out;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.newAnime {
+  animation: newAnime 1.4s ease-in-out;
+}
+
+@keyframes newAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .song-cards {
+    width: 70%;
+  }
+}
+
+@media (max-width: 503px) {
+  .range {
+    width: 80%;
+    margin-bottom: 1.5rem auto;
+  }
+
+  .cardImageImage {
+    width: 210px;
+    height: 210px;
+  }
+
+  .inputRange {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .song-cards {
+    width: 80%;
+  }
+
+  .cardImageImage {
+    width: 182px;
+    height: 182px;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .song-cards {
+    width: 85%;
+  }
+
+  .cardImageImage {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 300px) {
+  .song-cards {
+    width: 95%;
+  }
+}

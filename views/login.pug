@@ -1,0 +1,22 @@
+extends base
+
+block head 
+ link(rel="stylesheet", href="/styles/form.css")
+
+block content
+  .signup-container
+      form.login-form
+        h2 Log in to your Account
+        |                 
+        .form-group
+          label(for='email' ) Email
+          |           
+          input(type='email', id="email", placeholder='user@example.com', required='', autocomplete="on")
+        |         
+        .form-group
+          label(for='password') Password
+          |           
+          input(type='password',id="password", placeholder='••••••••', minlength='8', required='')
+        |                 
+        .submit-btn
+          button.btn(type='submit') Submit

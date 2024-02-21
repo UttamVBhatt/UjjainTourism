@@ -1,0 +1,38 @@
+header
+    nav
+      a(href='/')
+        img(src='/images/homeImage/logoImage.jpeg', alt="Website's Logo")
+        span#new UjjainVisitors        
+      ul.menu
+        li.navLinks.diNone
+          a(href='/') Home          
+        li.navLinks
+          a(href='/hotels') Hotels          
+        li.navLinks
+          a(href='/songs') Songs        
+        li.navLinks
+          a(href='/places') Places           
+        li.navLinks
+          a(href='/hidden') Hidden Places              
+      .hamburger
+        span.bar    
+        span.bar           
+        span.bar
+      if user 
+       .divbtn 
+         span.user-name
+           a(href=`/me/${user.id}`)= `Hello, ${user.name}`
+         a(href=`/me/${user.id}`) 
+           img.user-image-picture(src=`/images/userImages/${user.photo}`)
+         button.sign-up
+            span.log-out Log Out 
+      else 
+        .divbtn
+          button.sign-up
+            a.black(href='/signup')
+              i.fa-solid.fa-user-plus
+              span Sign Up          
+          button.log-in
+            a.black(href='/login')
+              i.fa-solid.fa-right-to-bracket
+              span Log in         

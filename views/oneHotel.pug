@@ -1,0 +1,65 @@
+extends hotels 
+
+block hotels 
+    for hotels  in filterHotels      
+        .hotel-container
+            .hotel-box
+                .hotel-card
+                    .star-heart
+                        .pad-increase
+                            .star-div
+                                i.fa-regular.fa-star
+                                |                   
+                                i.fa-regular.fa-star
+                                |                   
+                                i.fa-regular.fa-star
+                                |                   
+                                i.fa-regular.fa-star
+                                |                   
+                                i.fa-regular.fa-star
+                                |      
+                            if filterHotels.user.likes.includes(hotels.id)           
+                              .heart.red(data-set=`${hotels.id}/${filterHotels.user.id}`)
+                            else
+                              .heart(data-set=`${hotels.id}/${filterHotels.user.id}`)
+                    |            
+                    .heading-span
+                        .pad-increase
+                            h2= hotels.name
+                            |   
+                            if filterHotels.user.likes.includes(hotels.id)                
+                              span Added
+                            else 
+                              span.opac Added
+                    |             
+                    .summary= hotels.summary
+                    |             
+                    .address-available
+                        .pad-increase
+                            p.address-para | Address :-
+                                span.address-span= hotels.address
+                            | 
+                            if hotels.availability === 'Available'                
+                                p.available-para | Available :-
+                                    span.available Yes
+                            else  
+                                p.available-para | Available :-
+                                    span.not-available No
+                    |             
+                    .price-ratings
+                        .pad-increase
+                            p.price | Price :-
+                                span.price-span= hotels.price 
+                            |                 
+                            p.ratings | Ratings :-
+                                span.ratings-span= hotels.ratings
+                    |             
+                    .services
+                        .pad-increase
+                            p.services-para | Services :-
+                                span.service-span= hotels.services 
+                    |             
+                    .book-now-btn
+                        button.book-btn
+                          a(href=`/hotels/${hotels.slug}`) Book Now
+

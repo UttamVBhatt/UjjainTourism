@@ -1,0 +1,14 @@
+extends base
+
+block content 
+   a(href="/hiddenMap").show-map See all the locations on map :- Click Here 
+   each hiddenData in data  
+    .heading-div
+       h1.first-heading(data-aos='zoom-in')= hiddenData.heading       
+    section.data-section
+       .main-data-div
+          .data-image
+            img(data-aos='flip-up', src= `/images/hiddenImages/${hiddenData.images[0]}`, alt= `${hiddenData.heading}'s image` )           
+          .data-content
+            p= hiddenData.data
+

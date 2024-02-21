@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hotel-main {
+  width: 70%;
+  background-color: rgba(240, 230, 140, 0.195);
+  display: grid;
+  place-items: center;
+  margin-top: 4.7rem;
+}
+
+.main-carousel-box {
+  width: 95%;
+  height: 80vh;
+  padding: 1rem;
+  margin-top: 1.4rem;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.image-div {
+  position: absolute;
+  width: 100%;
+  height: 34rem;
+}
+
+.image-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 31rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.dot {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.active-dot {
+  background-color: white;
+}
+
+.btn {
+  border-radius: 50%;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.4rem;
+  height: 2.3rem;
+  width: 2.3rem;
+  position: absolute;
+  top: 17rem;
+  border: none;
+  outline: none;
+  z-index: 3;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.block {
+  display: block;
+  z-index: 2;
+}
+
+.filter-box {
+  width: 80%;
+  padding: 1rem;
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  height: 5rem;
+}
+
+.filters span {
+  display: block;
+  letter-spacing: 3px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  transition: 0.5s all ease;
+}
+
+.filters span a {
+  transition: 0.5s all ease;
+  z-index: 1;
+}
+
+.filters span:hover a {
+  color: rgb(108, 24, 24);
+  font-size: 1.2rem;
+  z-index: 3;
+}
+
+.filters span:hover {
+  color: orangered;
+}
+
+.footer {
+  margin-top: 5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.hotel-container {
+  width: 80%;
+  min-height: 23rem;
+  margin-bottom: 2.1rem;
+}
+
+.hotel-box {
+  width: 100%;
+  margin-top: 2.1rem;
+  padding: 1rem;
+}
+
+.hotel-card {
+  background-color: whitesmoke;
+  box-shadow: 30px 33px 99px -8px rgb(196, 187, 187);
+  border-radius: 21px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.2rem;
+}
+
+.star-heart,
+.services,
+.pad-increase,
+.address-available,
+.price-ratings,
+.heading-span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pad-increase {
+  padding: 0.7rem 0.8rem;
+}
+
+.summary {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  text-align: justify;
+}
+
+.heading-span .pad-increase span {
+  transition: 0.5s all ease;
+}
+
+.price-span,
+.ratings-span,
+.address-span,
+.service-span {
+  margin-left: 10px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.heading-span .pad-increase h2 {
+  color: rgb(133, 25, 25);
+}
+
+.services-para,
+.available-para,
+.price,
+.ratings,
+.address-para {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgb(133, 25, 25);
+}
+
+.available {
+  color: green;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.not-available {
+  color: red;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.service-span {
+  word-spacing: 5px;
+}
+
+.book-now-btn {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+}
+
+.book-btn {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background-color: orange;
+  color: whitesmoke;
+}
+
+.book-btn a {
+  color: whitesmoke;
+}
+
+.heart {
+  height: 17px;
+  width: 17px;
+  background-color: blue;
+  opacity: 0.5;
+  transform: rotate(45deg);
+  margin-top: 5px;
+  cursor: pointer;
+  margin-right: 0.9rem;
+}
+
+.heart::before {
+  content: " ";
+  width: 17px;
+  height: 17px;
+  background-color: red;
+  opacity: 0.5;
+  position: absolute;
+  transform: translateY(-50%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.heart::after {
+  content: " ";
+  width: 17px;
+  height: 17px;
+  background-color: red;
+  opacity: 0.5;
+  position: absolute;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.red {
+  background-color: fuchsia;
+}
+
+.heart.red::before {
+  background-color: fuchsia;
+  opacity: 1;
+}
+
+.heart.red::after {
+  background-color: fuchsia;
+  opacity: 1;
+}
+
+.star-div {
+  cursor: pointer;
+}
+
+.fa-regular.fa-star {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.star-heart i:hover {
+  color: red;
+}
+
+.opac {
+  opacity: 0;
+}
+
+@media (max-width: 1100px) {
+  .main-carousel-box {
+    width: 95%;
+  }
+  .hotel-container,
+  .hotel-main {
+    width: 80%;
+  }
+  .filter-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-carousel-box {
+    width: 98%;
+    height: 68vh;
+  }
+
+  .heart,
+  .heart::before,
+  .heart::after {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hotel-container,
+  .hotel-main,
+  .filter-box {
+    width: 98%;
+  }
+
+  .hotel-box {
+    padding: 0;
+  }
+  .image-div {
+    height: 25.5rem;
+    width: 100%;
+  }
+
+  .book-btn {
+    top: 13rem;
+  }
+
+  .btn {
+    top: 12rem;
+  }
+
+  .dot {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .dots {
+    top: 22.5rem;
+  }
+
+  .filter-box {
+    padding: 0.1rem;
+  }
+
+  .filters {
+    margin-top: 1rem;
+  }
+}

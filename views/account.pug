@@ -1,0 +1,153 @@
+extends base
+
+block head 
+ link(rel="stylesheet", href="/styles/account.css")
+
+block content 
+   .padding-div
+      .main-div
+        // /////////////////////////////////
+        // Give Padding to main-div
+        .nav-div
+         if user.role === 'user'
+          .account-main-nav
+            ul.account-ul
+              h3.account-ul-heading User
+              |               
+              li
+               a(href=`/me/${user.id}/liked-hotels`) Liked Hotels
+              |               
+              li
+               a(href=`/me/${user.id}/reviews`) My Reviews
+              |               
+              li
+               a(href=`/me/${user.id}/bookings`) My Bookings
+              |               
+              li
+               a(href='#update-data-div') My Settings
+         if user.role === 'admin'           
+          .account-main-nav
+            ul.account-ul
+              h3.account-ul-heading Admin
+              |               
+              li 1. Manage Hotels
+              |               
+              p - Get All Hotels
+              |               
+              p - Get One Hotels
+              |               
+              p - Update Hotel
+              |               
+              p - Delete Hotel
+              |               
+              li 2. Manage Users
+              |               
+              p - Get All Users
+              |               
+              p - Get One Users
+              |               
+              p - Delete User
+              |               
+              li 3. Manage Reviews
+              |               
+              p - Get All Reviews
+              |               
+              p - Get One Review
+              |               
+              p - Update Review
+         if user.role === 'owner'         
+          .account-main-nav
+            ul.account-ul
+              h3.account-ul-heading Owner
+              |               
+              li Create Hotel
+              |               
+              li Update Hotel
+              |               
+              li Delete Hotel
+              |               
+              li Get One Hotel
+          .account-main-nav
+            ul.account-ul
+              h3.account-ul-heading User
+              |               
+              li Liked Hotels
+              |               
+              li My Reviews
+              |               
+              li My Bookings
+              |               
+              li My Settings
+        // /////////////////////////////////////
+        // /////////////////////////////////////
+        .account-div
+          .initial-heading-div
+            h3.initial-heading= `Hello, ${user.name}` 
+          |           
+          span.account-nav-hamburger
+            span Settings
+          // Don't give padding to the account div instead give padding to it's childred
+          // 1) User Div
+          .user-div 
+            .image-upload-div
+              img(src=`/images/userImages/${user.photo}`, alt="User's Image")
+              |              
+              .user-card-info-div
+                p.user-card-info-para
+                  | Name :- 
+                  span.user-card-info-span= user.name 
+                |                 
+                p.user-card-info-para
+                  | Email :- 
+                  span.user-card-info-span= user.email 
+            .input-label-div  
+              label(for='photo').choose-photo Choose new photo 
+              input.form__upload(type='file', accept='image/*', id='photo', name='photo')
+              a#upload-photo Upload Photo 
+
+          block user-filters
+          // ///////////////////////////////////////////
+          // ///////////////////////////////////////////
+
+          .settings-div#update-data-div
+            .settings-heading
+              h3 Update Your Data
+            |             
+            .form-div
+              form.update-data-form
+                .input-label-div
+                  label(for='name') Name
+                  |                   
+                  input#name(type='text', placeholder= `${user.name}`, minlength='3', required='true' autocomplete='on')
+                |                 
+                .input-label-div
+                  label(for='email') Email
+                  |                   
+                  input#email(type='email', placeholder= `${user.email}`, required='true' autocomplete='on')
+          //
+            <div class="review-heading-div">
+            <h3>Update Password</h3>
+            </div>
+          .settings-div
+            .settings-heading
+              h3 Update Your Password
+            |             
+            .form-div
+              form.update-password-form
+                .input-label-div
+                  label(for='currentPassword') Current password
+                  |                   
+                  input#currentPassword(type='password', placeholder='••••••••', minlength='8', required='true')
+                |                 
+                .input-label-div
+                  label(for='newPassword') New password
+                  |                   
+                  input#newPassword(type='password', placeholder='••••••••', minlength='8', required='true')
+                |                 
+                .input-label-div
+                  label(for='passwordConfirm') Password Confirm
+                  |                   
+                  input#passwordConfirm(type='password', placeholder='••••••••', minlength='8', required='true')
+                |                 
+                .submit-form-btn-div
+                  button.submit-form-btn.update-password-btn Submit

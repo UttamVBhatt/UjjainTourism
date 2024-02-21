@@ -1,0 +1,22 @@
+extends base
+
+block head 
+ link(rel="stylesheet", href="/styles/form.css")
+
+block content
+  .signup-container
+      form.review-form
+        h2 Write Your Feedback
+        |                 
+        .form-group
+          label(for='review' ) Review
+          |           
+          input(type='text', id="review", placeholder='Nice Hotel', required='true', autocomplete="on" minlength='3')
+        |         
+        .form-group
+          label(for='ratings') Ratings
+          |           
+          input(type='text',id="ratings", placeholder='4.5', min='1', max='5', required='true',autocomplete='on')
+        |                 
+        .submit-btn
+          button.btn Submit

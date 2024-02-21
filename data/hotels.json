@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Mahakal Bhakta Niwas",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "500",
+    "address": "32, Mahakal Road Ujjain",
+    "ratings": "4.5",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "true",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel4.jpg"
+  },
+  {
+    "name": "Ganpati Paying Guest",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "500",
+    "address": "Near Harsiddhi Temple Ujjain",
+    "ratings": "4.6",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "false",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel5.jpg"
+  },
+  {
+    "name": "Hotel Shankar Palac",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "600",
+    "address": "54, Mahakal Road Ujjain",
+    "ratings": "4.6",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "true",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel6.jpg"
+  },
+  {
+    "name": "Hotel Rudra Palace",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "500",
+    "address": "Ravi Shankar Nagar Ujjain",
+    "ratings": "4.8",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "false",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel7.jpg"
+  },
+  {
+    "name": "Aashray Hotel",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "800",
+    "address": "Ram Ghat Ujjain",
+    "ratings": "4.9",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "true",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel8.jpg"
+  },
+  {
+    "name": "Chintaman Bhakta Niwas",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "630",
+    "address": "Chintaman Road Ujjain",
+    "ratings": "4.3",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "false",
+    "nearMahakal": "false",
+    "perPerson": "3",
+    "image": "hotel4.jpg"
+  },
+  {
+    "name": "Agrawal Guest House",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "700",
+    "address": "Freegunj Ujjain",
+    "ratings": "4.7",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "true",
+    "nearMahakal": "false",
+    "perPerson": "3",
+    "image": "hotel5.jpg"
+  },
+  {
+    "name": "Park Palace",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "1000",
+    "address": "Near Gopal Mandir Ujjain",
+    "ratings": "4.6",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "true",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel6.jpg"
+  },
+  {
+    "name": "Shipra Residence",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "500",
+    "address": "Dewas Gate Ujjain",
+    "ratings": "4.2",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "false",
+    "nearMahakal": "false",
+    "perPerson": "3",
+    "image": "hotel7.jpg"
+  },
+  {
+    "name": "Aanandam",
+    "Description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia tempore accusamus ex laborum quibusdam similique molestiae. Doloribus harum repudiandae commodi adipisci dolorem totam.",
+    "price": "1100",
+    "address": "Front of Mahakal Temple Ujjain",
+    "ratings": "4.9",
+    "availability": "Available",
+    "services": [
+      "Breakfast",
+      "Transportation",
+      "Internet",
+      "Parking",
+      "Dry Cleaning",
+      "Luggage Facility"
+    ],
+    "serviceAvailability": [""],
+    "acAvailability": "true",
+    "nearMahakal": "true",
+    "perPerson": "3",
+    "image": "hotel8.jpg"
+  }
+]

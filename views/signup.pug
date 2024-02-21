@@ -1,0 +1,36 @@
+extends base
+
+block head 
+ link(rel="stylesheet", href="/styles/form.css")
+
+block content
+  .signup-container
+      form.signup-form#form
+        h2 Create Your Account
+        |         
+        .form-group
+          label(for='name') Name
+          |           
+          input(type='text', id="name" , placeholder='User Name', required='true', autocomplete="on")
+        |         
+        .form-group
+          label(for='email' ) Email
+          |           
+          input(type='email', id="email", placeholder='user@example.com', required='true', autocomplete="on")
+        .form-group
+          label(for='email' ) Role 
+          |           
+          input(type='text', id="role", placeholder='user', required='true', autocomplete="on")
+        |         
+        .form-group
+          label(for='password') Password
+          |           
+          input(type='password',id="password", placeholder='••••••••', minlength='8', required='true')
+        |         
+        .form-group
+          label(for='passwordConfirm') PasswordConfirm
+          |           
+          input(type='password', id="passwordConfirm",placeholder='••••••••', minlength='8', required='true')
+        |         
+        .submit-btn
+          button.btn.submit-btn(type='submit') Submit

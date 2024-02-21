@@ -1,0 +1,67 @@
+extends base
+
+block head 
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+  link(rel='stylesheet', href='/styles/hotels.css')
+
+block script 
+  script(src='/js/hotel.js')
+
+block content 
+    main.hotel-main
+      .main-carousel-box
+        .carousel
+          .image-div.block
+            img(src='/images/hotelImages/hotel4.jpg', alt='Hotels Picture')
+          |           
+          .image-div
+            img(src='/images/hotelImages/hotel5.jpg', alt='Hotels Picture')
+          |           
+          .image-div
+            img(src='/images/hotelImages/hotel6.jpg', alt='Hotels Picture')
+          |           
+          .image-div
+            img(src='/images/hotelImages/hotel7.jpg', alt='Hotels Picture')
+          |           
+          .image-div
+            img(src='/images/hotelImages/hotel8.jpg', alt='Hotels Picture')
+          |           
+          .dots
+            span.dot.active-dot(data-set='0')
+            |             
+            span.dot(data-set='1')
+            |             
+            span.dot(data-set='2')
+            |             
+            span.dot(data-set='3')
+            |             
+            span.dot(data-set='4')
+          |           
+          button.btn.arrow-left(onclick='showImage(-1)')
+            | &#x276E;
+          |           
+          button.btn.arrow-right(onclick='showImage(1)')
+            | &#x276F;
+      |       
+      .filter-box
+        .filters
+          span.filter 
+           a(href='/hotels') | All Hotels |
+          span.filter 
+           a(href='/hotels/AC') | A.C |
+          |           
+          span.filter
+           a(href='/hotels/Non-AC') | Non-AC |
+          |           
+          span.filter
+           a(href='/hotels/AC-near-mahakal') | A.C-Near Mahakal |
+          |           
+          span.filter
+           a(href='/hotels/Non-AC-near-mahakal') | Non-AC-Near Mahakal |
+          span.filter
+           a(href='/hotels/available') | Available |
+          span.filter 
+           a(href='/hotels/top-5-hotels') | Top-5-Hotels |
+      block hotels 
+          h1 Placeholder
+

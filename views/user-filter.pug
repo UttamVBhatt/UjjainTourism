@@ -1,0 +1,23 @@
+extends account 
+
+block user-filters
+  if user.reviews[0]
+    .review-heading-div(data-aos='zoom-in')
+      h3 Your Reviews
+    |           
+    .reviews-div(data-aos='zoom-out')
+       for reviews in user.reviews 
+          .review-card
+            span.delete-review(data-set=`${reviews.id}`) Delete Review
+            .hotel-image-name
+              img(src=`/images/hotelImages/${reviews.hotelImage}`, alt="Hotel's Image")
+              |                 
+              span= reviews.hotelName
+            |               
+            .user-review-name
+              p= reviews.userReview
+              |                 
+              .user-reveiew-name-span
+                span= `- ${user.name}`
+  else
+     h3.else-booking You don't have any Reviews yet...  Book a hotel to give reviews on it

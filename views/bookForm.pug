@@ -1,0 +1,38 @@
+extends base 
+
+block head 
+ link(rel="stylesheet", href="/styles/form.css")
+
+block content
+  .signup-container
+      form.book-hotel-form
+        h2 Book Your Favourite Hotel Now
+        |                 
+        .form-group
+          label(for='your-name') Your Name
+          |                   
+          input#your-name(type='text', placeholder= `Name`, minlength='3', required='true' autocomplete='on')
+        .form-group
+          label(for='your-email') Your Email 
+          |                   
+          input#your-email(type='email', placeholder= `user@example.com`, required='true' autocomplete='on')
+        .form-group
+          label(for='phone-number') Calling Number 
+          |                   
+          input#phone-number(type='number', placeholder='8497526101', required='true' autocomplete='on' minlength='10' maxlength='10')
+        .form-group
+          label(for='whatsapp-number') Whatsapp Number 
+          |                   
+          input#whatsapp-number(type='number', placeholder='8497526101', required='true' autocomplete='on' minlength='10' maxlength='10')   
+          |
+        .form-group
+          label(for='date') Date For Booking
+          |                   
+          input#date(type='date', placeholder='DD / MM / YYYY', required='true') 
+        .form-group
+          label(for='no-of-staying-days') Number of Days to Stay  
+          |                   
+          input#no-of-staying-days(type='number', placeholder='1', required='true' autocomplete='on' min='1' max='2')  
+          |                 
+        .submit-btn
+          button.btn.book-hotel-btn(type='submit') Submit

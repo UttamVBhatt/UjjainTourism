@@ -1,0 +1,51 @@
+extends account 
+
+block user-filters 
+     if user.bookings[0]
+        .review-heading-div(data-aos='zoom-in')
+           h3 Your Bookings
+        .hotel-container
+           .hotel-box(data-aos='zoom-out')
+              for bookings in user.bookings
+                .hotel-card
+                    |            
+                    .heading-span
+                        .pad-increase
+                            h2= bookings.hotelName
+                            span.delete-my-booking(data-set=`${bookings.id}`) Delete My Booking
+                    |             
+                    .summary= bookings.summary
+                    |             
+                    .address-available
+                        .pad-increase
+                            p.address-para | Address :-
+                                span.address-span= bookings.address
+                    |             
+                    .price-ratings
+                        .pad-increase
+                            p.price | Price :-
+                                span.price-span= bookings.price 
+                            |                 
+                            p.ratings | Ratings :-
+                                span.ratings-span= bookings.ratings
+                    .price-ratings
+                     - const date = bookings.bookingDate.toLocaleString().split(',')[0];
+                        .pad-increase
+                            p.price | Booked For Date :-
+                                span.price-span.date-span= date
+                    |                         
+                    .book-now-btn
+                        button.book-btn
+                          a(href=`/hotels/${bookings.slug}`) See the Hotel
+                        - const newDate = new Date()
+                        - const day = newDate.getDate();
+                        - const month = newDate.getMonth();
+                        - const year = newDate.getFullYear();
+                        - const comparableDataDate = date.split('/')[1] 
+                        if  comparableDataDate <= day
+                          button.book-btn.review-btn 
+                            a(href=`/hotels/write-reviews/${user.id}/${bookings.hotelId}`) Write Review
+                        else 
+                          span You can write review after your booking date
+     else 
+       h3.else-booking You don't have any booking yet... 
