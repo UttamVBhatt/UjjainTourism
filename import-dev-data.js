@@ -30,17 +30,17 @@ mongoose
   .catch((err) => console.log(err));
 
 // const homeData = JSON.parse(fs.readFileSync("./data/home-data.json"));
-// const placesData = JSON.parse(fs.readFileSync("./data/places.json"));
+const placesData = JSON.parse(fs.readFileSync("./data/places.json"));
 // const hiddenData = JSON.parse(fs.readFileSync("./data/hidden.json"));
-const hotelData = JSON.parse(fs.readFileSync("./data/hotels.json"));
+// const hotelData = JSON.parse(fs.readFileSync("./data/hotels.json"));
 // const songData = JSON.parse(fs.readFileSync("./data/songs.json"));
 
 const importData = async () => {
   try {
     // await Home.create(homeData);
-    // await Places.create(placesData);
+    await Places.create(placesData);
     // await Hidden.create(hiddenData);
-    await Hotel.create(hotelData);
+    // await Hotel.create(hotelData);
     // await Song.create(songData);
     console.log("Data Successfully Loaded");
   } catch (err) {
@@ -51,7 +51,8 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     // await Song.deleteMany();
-    await Hotel.deleteMany();
+    // await Hotel.deleteMany();
+    await Places.deleteMany();
     console.log("Data Successfully Deleted");
   } catch (err) {
     console.log(err);
