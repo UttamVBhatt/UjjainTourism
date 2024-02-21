@@ -232,7 +232,7 @@ const getIn = async (method, url, data, message, dataset) => {
 
 function goToMe() {
   window.setTimeout(() => {
-    location.assign(`/me`);
+    location.assign(`/me/${urlForRouting[4]}`);
   }, 1000);
 }
 
