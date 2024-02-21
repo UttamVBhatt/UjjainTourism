@@ -107,6 +107,8 @@ const logOut = async () => {
       url: "/api/v1/users/logout",
     });
 
+    console.log(res);
+
     const token = res.data.token;
     document.cookie = "jwt" + "=" + token;
 
