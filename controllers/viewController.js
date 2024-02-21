@@ -27,8 +27,6 @@ exports.gettingData = (Model, template, title) => {
   return catchAsync(async (req, res, next) => {
     const data = await Model.find();
 
-    console.log(data);
-
     res.status(200).render(template, {
       title,
       data,
