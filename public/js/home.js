@@ -117,6 +117,7 @@ const logOut = async () => {
       }, 900);
     }
   } catch (err) {
+    console.log(err);
     showAlert("error", err.response.data.message);
   }
 };
