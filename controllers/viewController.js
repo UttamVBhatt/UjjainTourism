@@ -227,8 +227,8 @@ exports.getLikedHotels = catchAsync(async (req, res, next) => {
 
   let hotelObj = [];
 
-  user.likes.forEach((el, i) => {
-    if (hotels[i].id === el) {
+  for (let i = 0; i < hotels.length; i++) {
+    if (user.likes.includes(hotels[i].id)) {
       const newHotel = {
         hotelName: hotels[i].name,
         address: hotels[i].address,
@@ -241,8 +241,7 @@ exports.getLikedHotels = catchAsync(async (req, res, next) => {
 
       hotelObj.push(newHotel);
     }
-  });
-
+  }
   user.hotels = hotelObj;
 
   res.status(200).render("likes", {

@@ -51,7 +51,7 @@ const hideAlert = () => {
 ////// Login And SignUp //////
 
 const urlForRouting = window.location.href.split("/");
-const paraForRouting = urlForRouting[urlForRouting.length - 1];
+let paraForRouting = urlForRouting[urlForRouting.length - 1];
 
 /////// Setting Log out Button's display for account /filter routes ////////
 
@@ -135,7 +135,8 @@ const makeAlert = (message) => {
 
 const loginBtn = document.querySelector(".login-btn");
 const signUpBtn = document.querySelector(".signup-btn");
-const updateDataBtn = document.querySelectorAll(".update-password-btn");
+const updateDataBtn = document.querySelector(".update-data-btn");
+const updatePasswordFormBtn = document.querySelector(".update-password-btn");
 
 const getIn = async (method, url, data, message, dataset) => {
   const newMethod = method;
@@ -158,14 +159,20 @@ const getIn = async (method, url, data, message, dataset) => {
     }
 
     if (newUrl === "updateMe") {
+      if (paraForRouting.includes("#")) {
+        paraForRouting = paraForRouting.split("#")[0];
+      }
       url = `/api/v1/users/updateMe/${paraForRouting}`;
-      updateDataBtn.forEach((el) => {
-        el.target.textContent = "Updating...";
-      });
+
+      updateDataBtn.textContent = "Updating...";
     }
 
     if (newUrl === "updatePassword") {
+      if (paraForRouting.includes("#")) {
+        paraForRouting = paraForRouting.split("#")[0];
+      }
       url = `/api/v1/users/updatepassword/${paraForRouting}`;
+      updatePasswordFormBtn.textContent = "Updating...";
     }
 
     if (newUrl === "createBooking") {
@@ -230,12 +237,14 @@ const getIn = async (method, url, data, message, dataset) => {
       }, 1000);
     } else if (newUrl === "removeFromLikes") {
       showAlert("success", message);
+      goToMe();
     } else {
       makeAlert(message);
     }
   } catch (err) {
-    showAlert("error", err.response.data.message);
+    console.log(err);
     console.log(err.response.data);
+    showAlert("error", err.response.data.message);
   }
 };
 
@@ -243,6 +252,35 @@ function goToMe() {
   window.setTimeout(() => {
     location.assign(`/me/${urlForRouting[4]}`);
   }, 1000);
+}
+
+////////////////////////////////////////////////
+/////  Stuff related to account page //////////
+//////////////////////////////////////////////
+
+if (
+  urlForRouting[5] === "liked-hotels" ||
+  urlForRouting[5] === "reviews" ||
+  urlForRouting[5] === "bookings"
+) {
+  const choosePhoto = (document.querySelector(".choose-photo").style.display =
+    "none");
+  const formUpload = (document.querySelector("#upload-photo").style.display =
+    "none");
+
+  const settingsDiv = document.querySelectorAll(".settings-div");
+  const settingsHeading = document.querySelectorAll(".settings-heading");
+  const formdiv = document.querySelectorAll(".form-div");
+  const mySettings = document.querySelector(".my-settings");
+
+  mySettings.textContent = "My Account";
+  mySettings.setAttribute("href", `/me/${urlForRouting[4]}`);
+
+  for (let i = 0; i < settingsDiv.length; i++) {
+    settingsDiv[i].style.display = "none";
+    settingsHeading[i].style.display = "none";
+    formdiv[i].style.display = "none";
+  }
 }
 
 ////////////////////////////////////////////////
@@ -429,7 +467,6 @@ if (removeLikeBtn) {
   removeLikeBtn.forEach((el) => {
     el.addEventListener("click", () => {
       const dataset = el.dataset.set;
-      console.log(dataset);
       getIn("PATCH", "removeFromLikes", {}, "Removed from likes", dataset);
     });
   });

@@ -24,7 +24,7 @@ block content
                a(href=`/me/${user.id}/bookings`) My Bookings
               |               
               li
-               a(href='#update-data-div') My Settings
+               a.my-settings(href='#update-data-div') My Settings
          if user.role === 'admin'           
           .account-main-nav
             ul.account-ul
@@ -125,7 +125,7 @@ block content
                   |                   
                   input#email(type='email', placeholder= `${user.email}`, required='true' autocomplete='on')
                 .submit-form-btn-div
-                  button.submit-form-btn.update-password-btn Submit
+                  button.submit-form-btn.update-data-btn Submit
           //
             <div class="review-heading-div">
             <h3>Update Password</h3>
