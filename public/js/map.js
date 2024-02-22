@@ -12,8 +12,6 @@ const dataFunction = async (url) => {
       .then((data) => data)
       .catch((err) => console.log(err));
 
-    console.log(data);
-
     return data;
   } catch (err) {
     console.log(err);
