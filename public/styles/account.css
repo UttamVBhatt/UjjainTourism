@@ -9,6 +9,7 @@ html {
 
 .padding-div {
   width: 85%;
+  min-height: 100vh;
   background-color: #bbbbbb44;
   display: flex;
   justify-content: center;
