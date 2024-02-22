@@ -278,7 +278,3 @@ audio1.addEventListener("timeupdate", () => {
 range.addEventListener("change", () => {
   audio1.currentTime = (range.value * audio1.duration) / 100;
 });
-
-// const images = document.querySelectorAll(".songs_div img");
-
-// images.forEach((el) => el.classList.add("song-image"));
