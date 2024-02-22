@@ -2,116 +2,139 @@
   {
     "name": "Adiyogi",
     "author": "Kailash Kher",
-    "image": "image1.jpg"
+    "image": "image1.jpg",
+    "audio": "Adiyogi.mp3"
   },
   {
     "name": "Baba Teri...",
     "author": "Hansraj Raghuvanshi",
-    "image": "image2.jpg"
+    "image": "image2.jpg",
+    "audio": "Baba Teri Maya.mp3"
   },
   {
     "name": "Bam Bam Bol...",
     "author": "Niraj Singh",
-    "image": "image8.jpg"
+    "image": "image8.jpg",
+    "audio": "Bam Bam Bol Raha Hai Kashi.mp3"
   },
   {
     "name": "Bam Lahiri",
     "author": "Kailash Kher",
-    "image": "image4.jpg"
+    "image": "image4.jpg",
+    "audio": "Bam Lahiri.mp3"
   },
   {
     "name": "Bam Bholle",
     "author": "Viruss",
-    "image": "image5.jpg"
+    "image": "image5.jpg",
+    "audio": "BamBholle.mp3"
   },
   {
     "name": "Bhola Nyu Matke",
     "author": "Rajesh Singhpuria",
-    "image": "image6.jpg"
+    "image": "image6.jpg",
+    "audio": "Bhola Nyu Matke.mp3"
   },
   {
     "name": "Bholenath Ki Shadi",
     "author": "Hansraj Raghuvanshi",
-    "image": "image7.jpg"
+    "image": "image7.jpg",
+    "audio": "Bholenath-Ki-Shadi.mp3"
   },
   {
     "name": "Damru Bajaya",
     "author": "Hansraj Raghuvanshi",
-    "image": "image8.jpg"
+    "image": "image8.jpg",
+    "audio": "Damru-Bajaya.mp3"
   },
   {
     "name": "Hanuman Chalisa",
     "author": "Gulshan Kumar",
-    "image": "image9.jpg"
+    "image": "image9.jpg",
+    "audio": "Hanuman Chalisa.mp3"
   },
   {
     "name": "Har Har Mahadev",
     "author": "Vikram Montrose",
-    "image": "image10.jpg"
+    "image": "image10.jpg",
+    "audio": "Har Har Mahadev Omg2.mp3"
   },
   {
     "name": "Kyu Khadi Khadi...",
     "author": "Karambi and Dolly",
-    "image": "image11.jpg"
+    "image": "image11.jpg",
+    "audio": "Kyu Khadi Khadi Tu Hale Gora.mp3"
   },
   {
     "name": "Laagi Lagan Shankara",
     "author": "Hansraj Raghuvanshi",
-    "image": "image12.jpg"
+    "image": "image12.jpg",
+    "audio": "Laagi Lagan Shankara.mp3"
   },
   {
     "name": "Lo Sambhalo Bhole...",
     "author": "Lakhbir Singh",
-    "image": "image13.jpg"
+    "image": "image13.jpg",
+    "audio": "Lo Sambhalo Bhole Apni Kanwar.mp3"
   },
   {
     "name": "Mahakal Sarkar",
     "author": "Sunny Albela",
-    "image": "image14.jpg"
+    "image": "image14.jpg",
+    "audio": "Mahakal Sarkar.mp3"
   },
   {
     "name": "Mahakal Ki Gulami",
     "author": "Kishan Bhagat",
-    "image": "image15.jpg"
+    "image": "image15.jpg",
+    "audio": "Mahakal-Ki-Gulami.mp3"
   },
   {
     "name": "Mera Bhola Hai...",
     "author": "Hansraj Raghuvanshi",
-    "image": "image16.jpg"
+    "image": "image16.jpg",
+    "audio": "Mera Bhola Hai Bhandari.mp3"
   },
   {
     "name": "Namo Namo Ji...",
     "author": "Amit Trivedi",
-    "image": "image17.jpg"
+    "image": "image17.jpg",
+    "audio": "Nameo-Namo-Ji-Shankara.mp3"
   },
   {
     "name": "Om-Namah-Shivay",
     "author": "Udit Narayana",
-    "image": "image18.jpg"
+    "image": "image18.jpg",
+    "audio": "Om-Namah-Shiay.mp3"
   },
   {
     "name": "Shiv Sama Rahe...",
     "author": "Hansraj Raghuvanshi",
-    "image": "image19.jpg"
+    "image": "image19.jpg",
+    "audio": "Shiv-Sama-Rahe-Mujhme.mp3"
   },
   {
     "name": "Taqdeer Mujhe Le Chal",
     "author": "Shahnaaz Akhtar",
-    "image": "image20.jpg"
+    "image": "image20.jpg",
+    "audio": "Taqdeer Mujhe Le Chal Mahakal Ki Basti Main.mp3"
   },
   {
     "name": "Teri Hove Jay...",
     "author": "Kishan Bhagat",
-    "image": "image21.jpg"
+    "image": "image21.jpg",
+    "audio": "Teri hove jay jaykar.mp3"
   },
   {
     "name": "Ujjain Ke Raja",
     "author": "Kishan Bhagat",
-    "image": "image22.jpg"
+    "image": "image22.jpg",
+    "audio": "Ujjain Ke Raja.mp3"
   },
   {
     "name": "Unchi Unchi Vaadi",
     "author": "Hansraj Raghuvanshi",
-    "image": "image23.jpg"
+    "image": "image23.jpg",
+    "audio": "Unchi Unchi Vaadi Mein Baste Hai Bhole Shankar.mp3"
   }
 ]

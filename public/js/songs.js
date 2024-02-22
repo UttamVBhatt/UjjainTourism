@@ -28,28 +28,10 @@ let isplaying;
 
 let songs = [
   {
-    songName: "Adiyogi",
-    authorName: "Kailash Kher",
-    image: "/images/songImages/image1.jpg",
-    audio: "/songs/Adiyogi.mp3",
-  },
-  {
-    songName: "Bhola Nyu Matke",
-    authorName: "Rajesh Singhpuria",
-    image: "/images/songImages/image6.jpg",
-    audio: "/songs/Bhola Nyu Matke.mp3",
-  },
-  {
-    songName: "Bam Bholle",
-    authorName: "Viruss",
-    image: "/images/songImages/image5.jpg",
-    audio: "/songs/BamBholle.mp3",
-  },
-  {
-    songName: "Har Har Mahadev",
-    authorName: "Vikram Montrose",
-    image: "/images/songImages/image10.jpg",
-    audio: "/songs/Har Har Mahadev Omg 2.mp3",
+    songName: "Baba Teri...",
+    authorName: "Hansraj Rajhuvanshi",
+    image: "/images/songImages/image2.jpg",
+    audio: "/songs/Baba Teri Maya.mp3",
   },
   {
     songName: "Bam Bam Bol...",
@@ -64,16 +46,10 @@ let songs = [
     audio: "/songs/Bam Lahiri.mp3",
   },
   {
-    songName: "Hanuman Chalisa",
-    authorName: "Gulshan Kumar",
-    image: "/images/songImages/image9.jpg",
-    audio: "/songs/Hanuman Chalisa.mp3",
-  },
-  {
-    songName: "Baba Teri...",
-    authorName: "Hansraj Rajhuvanshi",
-    image: "/images/songImages/image2.jpg",
-    audio: "/songs/Baba Teri Maya.mp3",
+    songName: "Bam Bholle",
+    authorName: "Viruss",
+    image: "/images/songImages/image5.jpg",
+    audio: "/songs/BamBholle.mp3",
   },
   {
     songName: "Bholenath Ki Shadi",
@@ -82,10 +58,40 @@ let songs = [
     audio: "/songs/Bholenath-Ki-Shadi.mp3",
   },
   {
+    songName: "Bhola Nyu Matke",
+    authorName: "Rajesh Singhpuria",
+    image: "/images/songImages/image6.jpg",
+    audio: "/songs/Bhola Nyu Matke.mp3",
+  },
+  {
     songName: "Damru Bajaya",
     authorName: "Hansraj Raghuvanshi",
     image: "/images/songImages/image8.jpg",
     audio: "/songs/Damru-Bajaya.mp3",
+  },
+  {
+    songName: "Hanuman Chalisa",
+    authorName: "Gulshan Kumar",
+    image: "/images/songImages/image9.jpg",
+    audio: "/songs/Hanuman Chalisa.mp3",
+  },
+  {
+    songName: "Har Har Mahadev",
+    authorName: "Vikram Montrose",
+    image: "/images/songImages/image10.jpg",
+    audio: "/songs/Har Har Mahadev Omg 2.mp3",
+  },
+  {
+    songName: "Kyu Khadi Khadi...",
+    authorName: "Karambi and Dolly",
+    image: "/images/songImages/image11.jpg",
+    audio: "/songs/Kyu Khadi Khadi Tu Hale Gora.mp3",
+  },
+  {
+    songName: "Laagi Lagan Shankara",
+    authorName: "Hansraj Raghuvansh12",
+    image: "/images/songImages/image12.jpg",
+    audio: "/songs/Laagi Lagan Shankara.mp3",
   },
   {
     songName: "Lo Sambhalo Bhole...",
@@ -100,22 +106,52 @@ let songs = [
     audio: "/songs/Mahakal Sarkar.mp3",
   },
   {
-    songName: "Om-Namah-Shivay",
-    authorName: "Udit Narayana",
-    image: "/images/songImages/image18.jpg",
-    audio: "/songs/Om-Namah-Shivay.mp3",
-  },
-  {
     songName: "Mera Bhola Hai...",
     authorName: "Hansraj Raghuvanshi",
     image: "/images/songImages/image16.jpg",
     audio: "/songs/Mera Bhola Hai Bhandari.mp3",
   },
   {
+    songName: "Adiyogi",
+    authorName: "Kailash Kher",
+    image: "/images/songImages/image1.jpg",
+    audio: "/songs/Adiyogi.mp3",
+  },
+  {
+    songName: "Om-Namah-Shivay",
+    authorName: "Udit Narayana",
+    image: "/images/songImages/image18.jpg",
+    audio: "/songs/Om-Namah-Shivay.mp3",
+  },
+  {
+    songName: "Shiv Sama Rahe...",
+    authorName: "Hansraj Raghuvanshi",
+    image: "/images/songImages/image19.jpg",
+    audio: "/songs/Shiv-Sama-Rahe-Mujhme.mp3",
+  },
+  {
+    songName: "Taqdeer Mujhe Le Chal",
+    authorName: "Shahzaaz Akhtar",
+    image: "/images/songImages/image20.jpg",
+    audio: "/songs/Taqdeer Mujhe Le Chal Mahakal Ki Basti Main.mp3",
+  },
+  {
     songName: "Teri Hove Jay...",
     authorName: "Kishan Bhagat",
     image: "/images/songImages/image21.jpg",
     audio: "/songs/Teri hove jay jaykar.mp3",
+  },
+  {
+    songName: "Unchi Unchi Vaadi",
+    authorName: "Hansraj Raghuvanshi",
+    image: "/images/songImages/image23.jpg",
+    audio: "/songs/Unchi Unchi Vaadi Mein Baste Hai Bhole Shankar.mp3",
+  },
+  {
+    songName: "Ujjain Ke Raja",
+    authorName: "Kishan Bhagat",
+    image: "/images/songImages/image22.jpg",
+    audio: "/songs/Ujjain Ke Raja.mp3",
   },
   {
     songName: "Namo Namo Ji...",
@@ -128,42 +164,6 @@ let songs = [
     authorName: "Kishan Bhagat",
     image: "/images/songImages/image15.jpg",
     audio: "/songs/Mahakal-Ki-Gulami.mp3",
-  },
-  {
-    songName: "Shiv Sama Rahe...",
-    authorName: "Hansraj Raghuvanshi",
-    image: "/images/songImages/image19.jpg",
-    audio: "/songs/Shiv-Sama-Rahe-Mujhme.mp3",
-  },
-  {
-    songName: "Ujjain Ke Raja",
-    authorName: "Kishan Bhagat",
-    image: "/images/songImages/image22.jpg",
-    audio: "/songs/Mahakal Ki Gulami.mp3",
-  },
-  {
-    songName: "Taqdeer Mujhe Le Chal",
-    authorName: "Shahzaaz Akhtar",
-    image: "/images/songImages/image20.jpg",
-    audio: "/songs/Taqdeer Mujhe Le Chal Mahakal Ki Basti Main.mp3",
-  },
-  {
-    songName: "Unchi Unchi Vaadi",
-    authorName: "Hansraj Raghuvanshi",
-    image: "/images/songImages/image23.jpg",
-    audio: "/songs/Unchi Unchi Vaadi Mein Baste Hai Bhole Shankar.mp3",
-  },
-  {
-    songName: "Laagi Lagan Shankara",
-    authorName: "Hansraj Raghuvansh12",
-    image: "/images/songImages/image9.jpg",
-    audio: "/songs/Laagi Lagan Shankara.mp3",
-  },
-  {
-    songName: "Kyu Khadi Khadi...",
-    authorName: "Karambi and Dolly",
-    image: "/images/songImages/image11.jpg",
-    audio: "/songs/Kyu Khadi Khadi Tu Hale Gora.mp3",
   },
 ];
 
