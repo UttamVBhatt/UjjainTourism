@@ -82,6 +82,7 @@ if (signUpForm) {
     const role = document.querySelector("#role").value;
     const password = document.querySelector("#password").value;
     const passwordConfirm = document.querySelector("#passwordConfirm").value;
+    console.log({ name, email, role, password, passwordConfirm });
     getIn(
       "POST",
       "signup",
@@ -157,6 +158,7 @@ const getIn = async (method, url, data, message, dataset) => {
       url = "/api/v1/users/signup";
       signUpBtn.textContent = "Creating Account...";
     }
+    console.log(url);
 
     if (newUrl === "updateMe") {
       if (paraForRouting.includes("#")) {
