@@ -158,7 +158,6 @@ const getIn = async (method, url, data, message, dataset) => {
       url = "/api/v1/users/signup";
       signUpBtn.textContent = "Creating Account...";
     }
-    console.log(url);
 
     if (newUrl === "updateMe") {
       if (paraForRouting.includes("#")) {
@@ -197,7 +196,6 @@ const getIn = async (method, url, data, message, dataset) => {
       url = `/added/${dataset}`;
     }
 
-    console.log(method, url, data);
     const res = await axios({
       method,
       url,
