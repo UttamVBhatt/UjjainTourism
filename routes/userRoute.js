@@ -10,6 +10,9 @@ const reviewRouter = require("./../routes/reviewRoute");
 router.post("/signup", authController.signUp);
 router.post("/login", authController.login);
 
+router.post("/forgotPassword", authController.forgotPassword);
+router.post("/resetPassword/:token", authController.resetPassword);
+
 // router.use(authController.protect);
 
 router.get("/logout", authController.logOut);
