@@ -195,6 +195,7 @@ const getIn = async (method, url, data, message, dataset) => {
       url = `/added/${dataset}`;
     }
 
+    console.log(method, url, data);
     const res = await axios({
       method,
       url,
