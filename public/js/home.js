@@ -219,17 +219,16 @@ const getIn = async (method, url, data, message, dataset) => {
       makeAlert(message);
     } else if (newUrl === "createBooking") {
       showAlert("success", message);
-      goToMe();
+      goToMe(5);
     } else if (newUrl === "deleteBooking") {
       showAlert("success", message);
-      goToMe();
-      console.log(urlForRouting);
+      goToMe(4);
     } else if (newUrl === "deleteReview") {
       showAlert("success", message);
-      goToMe();
+      goToMe(4);
     } else if (newUrl === "createReview") {
       showAlert("success", message);
-      goToMe();
+      goToMe(5);
     } else if (newUrl === "likeAndUnlike") {
       showAlert("success", message);
       window.setTimeout(() => {
@@ -237,7 +236,7 @@ const getIn = async (method, url, data, message, dataset) => {
       }, 1000);
     } else if (newUrl === "removeFromLikes") {
       showAlert("success", message);
-      goToMe();
+      goToMe(4);
     } else {
       makeAlert(message);
     }
@@ -248,9 +247,9 @@ const getIn = async (method, url, data, message, dataset) => {
   }
 };
 
-function goToMe() {
+function goToMe(x) {
   window.setTimeout(() => {
-    location.assign(`/me/${urlForRouting[4]}`);
+    location.assign(`/me/${urlForRouting[x]}`);
   }, 1000);
 }
 

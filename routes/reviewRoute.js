@@ -7,6 +7,7 @@ const reviewController = require("./../controllers/reviewController");
 router
   .route("/write-reviews/:userId/:hotelId")
   .post(
+    reviewController.checkingTheAleradyWrittenReview,
     reviewController.checkingTheUserAndHotelId,
     reviewController.createReview
   );

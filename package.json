@@ -4,7 +4,7 @@
   "description": "A Website to get you the significant places of ujjain along with the location and hotels",
   "main": "server.js",
   "scripts": {
-    "build": "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "author": "Uttam V Bhatt",
   "license": "ISC",
