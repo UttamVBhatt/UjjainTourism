@@ -244,9 +244,10 @@ const getIn = async (method, url, data, message, dataset) => {
   } catch (err) {
     console.log(err);
     console.log(err.response.data);
-    loginBtn.textContent = "Submit";
-    signUpBtn.textContent = "Submit";
     showAlert("error", err.response.data.message);
+    window.setTimeout(() => {
+      location.reload(true);
+    }, 900);
   }
 };
 
