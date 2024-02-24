@@ -247,7 +247,7 @@ const getIn = async (method, url, data, message, dataset) => {
     showAlert("error", err.response.data.message);
     window.setTimeout(() => {
       location.reload(true);
-    }, 900);
+    }, 1900);
   }
 };
 

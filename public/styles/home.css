@@ -441,7 +441,7 @@ nav .divbtn {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 435px) {
   .first-heading,
   .heading-div h1 {
     width: 100%;
@@ -712,4 +712,8 @@ footer a:hover {
   .alert-booking-btn-div {
     width: 14rem;
   }
+}
+
+.error-message {
+  padding: 0.8rem;
 }
