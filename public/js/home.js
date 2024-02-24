@@ -196,18 +196,11 @@ const getIn = async (method, url, data, message, dataset) => {
       url = `/added/${dataset}`;
     }
 
-    const res = await fetch(url, method, data)
-      .then((response) => response.json())
-      .catch((err) => console.log(err));
-
-    console.log(res);
-    console.log(method, url, data);
-
-    // const res = await axios({
-    //   method,
-    //   url,
-    //   data,
-    // });
+    const res = await axios({
+      method,
+      url,
+      data,
+    });
 
     if (
       newUrl === "login" ||

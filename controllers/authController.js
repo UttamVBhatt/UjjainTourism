@@ -42,13 +42,12 @@ const createSendToken = (user, status, res) => {
 // Signing up the user
 exports.signUp = catchAsync(async (req, res, next) => {
   const newUser = await User.create(req.body);
-  console.log(newUser);
+
   const url = `${req.protocol}://${req.get("host")}/me/${newUser.id}`;
 
-  const email = await new Email(newUser, url).sendWelcome();
-
-  console.log(email);
-
+  if (process.env.NODE_ENV === "development") {
+    await new Email(newUser, url).sendWelcome();
+  }
   createSendToken(newUser, 201, res);
 });
 
