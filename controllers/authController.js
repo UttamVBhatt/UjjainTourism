@@ -45,7 +45,9 @@ exports.signUp = catchAsync(async (req, res, next) => {
 
   const url = `${req.protocol}://${req.get("host")}/me/${newUser.id}`;
 
-  await new Email(newUser, url).sendWelcome();
+  const email = await new Email(newUser, url).sendWelcome();
+
+  console.log(email);
 
   createSendToken(newUser, 201, res);
 });
