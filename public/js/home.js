@@ -69,6 +69,7 @@ if (
 const signUpForm = document.querySelector(".signup-form");
 const loginForm = document.querySelector(".login-form");
 const logOutBtn = document.querySelector(".log-out");
+const bookHotelBtn = document.querySelector(".book-hotel-btn");
 
 const updatePasswordBtn = document.querySelector(
   ".submit-form-btn.update-password-btn"
@@ -178,6 +179,7 @@ const getIn = async (method, url, data, message, dataset) => {
 
     if (newUrl === "createBooking") {
       url = `/api/v1/bookings/book-hotel/${urlForRouting[4]}/${urlForRouting[5]}`;
+      bookHotelBtn.textContent = "Submiting...";
     }
 
     if (newUrl === "deleteBooking") {
@@ -247,7 +249,7 @@ const getIn = async (method, url, data, message, dataset) => {
     showAlert("error", err.response.data.message);
     window.setTimeout(() => {
       location.reload(true);
-    }, 1900);
+    }, 3000);
   }
 };
 
@@ -260,6 +262,10 @@ function goToMe(x) {
 ////////////////////////////////////////////////
 /////  Stuff related to account page //////////
 //////////////////////////////////////////////
+
+if (urlForRouting[3] === "places" || urlForRouting[3] === "hidden") {
+  logOutBtn.style.display = "none";
+}
 
 if (
   urlForRouting[5] === "liked-hotels" ||
@@ -357,7 +363,6 @@ const bookHotelForm = document.querySelector(".book-hotel-form");
 if (bookHotelForm) {
   bookHotelForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = document.getElementById("your-name").value;
     const callingNumber = document.getElementById("phone-number").value;
     const whatsappNumber = document.getElementById("whatsapp-number").value;
     const date = document.getElementById("date").value;
@@ -365,7 +370,7 @@ if (bookHotelForm) {
     getIn(
       "POST",
       "createBooking",
-      { name, callingNumber, whatsappNumber, date, noOfDaysToStay },
+      { callingNumber, whatsappNumber, date, noOfDaysToStay },
       "Congratulations, Hotel Booked Successfully"
     );
   });
@@ -393,6 +398,7 @@ const showBookingAlert = (type, urlType, msg, dataset) => {
 
   noDeleteBtn.addEventListener("click", hideBookingAlert);
   const deleteBooking = () => {
+    hideBookingAlert();
     getIn("DELETE", urlType, "", "Deleted Successfully", dataset);
   };
   deleteBtn.addEventListener("click", deleteBooking);

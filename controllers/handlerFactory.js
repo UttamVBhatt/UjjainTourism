@@ -17,7 +17,21 @@ exports.deleteOne = (Model) =>
   });
 
 exports.createOne = (Model) =>
-  catchAsync(async (req, res) => {
+  catchAsync(async (req, res, next) => {
+    if (req.body.date) {
+      const todaysDate = new Date(Date.now()).getDate();
+      const date = +req.body.date.split("-")[2];
+
+      if (date < todaysDate) {
+        return next(
+          new AppError(
+            "Date of booking should not be of past, you can book hotels for today or for any future date",
+            401
+          )
+        );
+      }
+    }
+
     const newDoc = await Model.create(req.body);
     res.status(201).json({
       status: "success",

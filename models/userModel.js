@@ -74,7 +74,7 @@ userSchema.methods.comparePasswords = function (
 };
 
 userSchema.methods.changedPasswordAfter = function (jwtTimeStamp) {
-  if (this.asswordChangedAt) {
+  if (this.passwordChangedAt) {
     const changedTimeStamp = parseInt(
       this.passwordChangedAt.getTime() / 1000,
       10

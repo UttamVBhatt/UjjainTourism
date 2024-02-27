@@ -7,6 +7,11 @@ const bookingSchema = new mongoose.Schema({
     required: [true, "A user must have a name"],
     minlength: [3, "A name must contain atleast 3 characters"],
   },
+  email: {
+    type: String,
+    required: [true, "You have to provide your email address"],
+    validate: [validator.isEmail, "Please provide valid email"],
+  },
   callingNumber: {
     type: Number,
     minlength: [10, "Your number should have atleast 10 in numbers"],
