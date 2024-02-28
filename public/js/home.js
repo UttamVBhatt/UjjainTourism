@@ -263,7 +263,12 @@ function goToMe(x) {
 /////  Stuff related to account page //////////
 //////////////////////////////////////////////
 
-if (urlForRouting[3] === "places" || urlForRouting[3] === "hidden") {
+if (
+  urlForRouting[3] === "places" ||
+  urlForRouting[3] === "hidden" ||
+  urlForRouting[3] === "placesMap" ||
+  urlForRouting[3] === "hiddenMap"
+) {
   logOutBtn.style.display = "none";
 }
 
