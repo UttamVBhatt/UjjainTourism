@@ -91,7 +91,7 @@ exports.getAll = (Model) =>
     const docs = await Model.find(features.query);
 
     res.status(200).json({
-      totalHotels: docs.length,
+      totalDocs: docs.length,
       status: "success",
       docs,
     });

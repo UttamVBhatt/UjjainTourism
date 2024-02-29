@@ -4,6 +4,8 @@ const router = express.Router({ mergeParams: true });
 
 const reviewController = require("./../controllers/reviewController");
 
+router.use(authController.protect);
+
 router
   .route("/write-reviews/:userId/:hotelId")
   .post(
