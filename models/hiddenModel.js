@@ -7,6 +7,8 @@ const hiddenSchema = new mongoose.Schema({
   coordinates: [String],
 });
 
+hiddenSchema.index({ heading: 1 });
+
 const Hidden = mongoose.model("Hidden", hiddenSchema);
 
 module.exports = Hidden;

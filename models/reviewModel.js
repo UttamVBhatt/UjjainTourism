@@ -35,6 +35,8 @@ reviewSchema.pre(/^find/, function (next) {
   next();
 });
 
+reviewSchema.index({ review: 1 });
+
 const Review = mongoose.model("Review", reviewSchema);
 
 module.exports = Review;

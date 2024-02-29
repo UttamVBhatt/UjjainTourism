@@ -58,6 +58,8 @@ bookingSchema.pre(/^find/, function (next) {
   next();
 });
 
+bookingSchema.index({ name: 1 });
+
 const Booking = new mongoose.model("Booking", bookingSchema);
 
 module.exports = Booking;
