@@ -451,6 +451,7 @@ if (reviewForm) {
     e.preventDefault();
     const review = document.querySelector("#review").value;
     const rating = document.querySelector("#ratings").value;
+    document.querySelector(".create-review").textContent = "Submiting...";
     getIn("POST", "createReview", { review, rating }, "Review Created");
   });
 }

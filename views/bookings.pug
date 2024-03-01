@@ -38,11 +38,11 @@ block user-filters
                         button.book-btn
                           a(href=`/hotels/${bookings.slug}`) See the Hotel
                         - const newDate = new Date()
-                        - const day = newDate.getDate();
+                        - const day = newDate.getDay();
                         - const month = newDate.getMonth();
-                        - const year = newDate.getFullYear();
-                        - const comparableDataDate = date.split('/')[1] 
-                        if  comparableDataDate <= day
+                        - const compDay = date.split('/')[1] ;
+                        - const compMonth = date.split('/')[0];
+                        if  compMonth <= month || compDay <= day
                           button.book-btn.review-btn 
                             a(href=`/hotels/write-reviews/${user.id}/${bookings.hotelId}`) Write Review
                         else 

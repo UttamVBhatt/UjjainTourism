@@ -11,9 +11,10 @@ exports.checkingTheUserAndHotelId = (req, res, next) => {
 
 exports.checkingTheAleradyWrittenReview = catchAsync(async (req, res, next) => {
   const userId = req.params.userId;
+  const hotelId = req.params.hotelId;
   const reviews = await Review.find();
   Object.values(reviews).map((el) => {
-    if (el.user.id === userId) {
+    if (el.hotel.id === hotelId && el.user.id === userId) {
       return next(new AppError("You can only write one review on a hotel"));
     }
   });
