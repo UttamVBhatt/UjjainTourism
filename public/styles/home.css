@@ -11,6 +11,10 @@
   font-family: "Tajawal", sans-serif;
 }
 
+*::selection {
+  background-color: orangered;
+}
+
 header {
   width: 100%;
 }
